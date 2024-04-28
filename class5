@@ -1,0 +1,75 @@
+
+name = "test"
+if name == "test":
+    print("이름이 맞습니다")
+else:
+    print("이름이 틀립니다.")
+     
+이름이 맞습니다
+
+  if elif else 예제.
+pocket = 500
+if pocket == 1000:
+    print("복권 구매")
+elif pocket ==500:
+    print("껌 구매")
+else:
+    print("집이나 가야지")
+     
+껌 구매
+
+a = "사과"
+b = "바나나"
+c = "치즈"
+if a == "사과" or b == "안바나나":
+    print("사과 이거나 바나나 입니다.")
+
+if a == "사과" and b == "바나나":
+    print("사과 이고 바나나 입니다.")
+
+if not c == "사과":
+    print("사과가 아니어야 여기 들어옵니다.")
+     
+사과 이거나 바나나 입니다.
+사과 이고 바나나 입니다.
+사과가 아니어야 여기 들어옵니다.
+
+
+a = [1,2,3,4,5,6,7,8,9,10]
+
+if 1 in a:
+    print("1 is in a")
+
+if 10 in a:
+    print("10 is in a")
+     
+1 is in a
+10 is in a
+
+ = 0
+result1 = 0
+while True:
+  if j > 100:
+    break
+
+  j +=1
+  if j % 2 == 0:
+    result1 += j
+
+print('1번 방법 (break) : {0}'.format(result1))
+     
+1번 방법 (break) : 2550
+
+#2번 방법
+k = 0
+result2 = 0
+while k < 100:
+  k += 1
+  if k % 2 != 0:
+    continue
+
+  result2 += k
+
+print('2번 방법 (continue) : {0}'.format(result2))
+     
+2번 방법 (continue) : 2550
