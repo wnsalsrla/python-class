@@ -1,0 +1,274 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM/P5DsBvmf72JUqh30fd8y",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/wnsalsrla/python-class/blob/main/class11\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "brGHacQKeMAl"
+      },
+      "outputs": [],
+      "source": [
+        "\n",
+        "f = open(\"newfile.txt\", 'w')\n",
+        "f.close()\n",
+        "\n",
+        "f = open(\"e:/python/Day10/newfile.txt\", 'w')\n",
+        "f.close()\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# w: 쓰기\n",
+        "f = open('ex_memo.txt','w')\n",
+        "students = ['김철수', '최영', '한석규', '김태희']\n",
+        "for student in students:\n",
+        "    msg = student\n",
+        "    f.write(msg+\"\\n\")\n",
+        "f.close()\n",
+        "\n",
+        "\n",
+        "\n",
+        "file = open('hello.txt', 'w')    # hello.txt 파일을 쓰기 모드(w)로 열기. 파일 객체 반환\n",
+        "file.write('Hello, world!')      # 파일에 문자열 저장\n",
+        "file.close()"
+      ],
+      "metadata": {
+        "id": "FfwbR2dyeas2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "# a: 쓰기\n",
+        "f = open('test.txt','a', encoding='UTF-8')\n",
+        "\n",
+        "for i in range(4,10):\n",
+        "    data = \"%d 번째 줄입니다. \\n\"%i\n",
+        "    f.write(data)\n",
+        "f.close()"
+      ],
+      "metadata": {
+        "id": "URkh4BXBeeHc"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dict1 = {'hello' : 1, 'brother' : 2}\n",
+        "file1 = open(\"Original.txt\", \"w\")\n",
+        "\n",
+        "str1 = repr(dict1)\n",
+        "file1.write(\"dict1 = \" + str1 + \"\\n\")\n",
+        "\n",
+        "file1.close()\n",
+        "test_file = open(\"test.txt\",\"w\")\n",
+        "\n",
+        "a = 1\n",
+        "b = 2\n",
+        "test_file.write('%d + %d = %d' %(a, b, a+b))\n",
+        "\n",
+        "test_file.close\n",
+        "from random import randint  #난수 생성 랜덤 int를 가져옴\n",
+        "\n",
+        "\n",
+        "with open('text.txt', 'w') as f:\n",
+        "   f.write('이번주 로또 번호는 ->')\n",
+        "   for lotto in range(6):\n",
+        "      f.write(str(randint(0,50)) +' , ')\n",
+        "\n",
+        "f.close()\n"
+      ],
+      "metadata": {
+        "id": "Mw31W1CdehJN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "lines = ['안녕하세요.\\n', '파이썬\\n', '코딩 도장입니다.\\n']\n",
+        "\n",
+        "with open('hello.txt', 'w') as file:\n",
+        "# hello.txt 파일을 쓰기 모드(w)로 열기\n",
+        "    file.writelines(lines)\n",
+        "file.close()\n",
+        "f = open(\"hz.txt\", \"a\", encoding='UTF-8')\n",
+        "\n",
+        "f.writelines([\"\\n홈짱닷컴\", \"\\nHomzzang.com\"])\n",
+        "\n",
+        "f.close()\n",
+        ""
+      ],
+      "metadata": {
+        "id": "QVL2gPZ6en-D"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# w: 쓰기\n",
+        "f = open('ex_memo1.txt','w')\n",
+        "students = ['김철수', '최영', '한석규', '김태희']\n",
+        "for student in students:\n",
+        "    msg = student\n",
+        "    f.write(msg+\"\\n\")\n",
+        "f.close()\n",
+        "\n",
+        "\n",
+        "f = open('ex_memo2.txt','w')\n",
+        "students = ['김철수', '최영', '한석규', '김태희']\n",
+        "f.writelines('\\n'.join(students))\n",
+        "f.close()\n"
+      ],
+      "metadata": {
+        "id": "AaJzRZHnepvs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#파일 r 모드로 열기\n",
+        "f = open('t2.txt', 'r')\n",
+        "\n",
+        "# read() 함수 이용해서 하나씩 읽어오기\n",
+        "print('\\n1. read()')\n",
+        "print(f'위치 : {f.tell()}')\n",
+        "\n",
+        "s1 = f.read(1)\n",
+        "print(s1)\n",
+        "\n",
+        "# readline() 함수 이용해서 한 라인씩 읽어오기\n",
+        "print('\\n2. readline()')\n",
+        "print(f'위치 : {f.tell()}')\n",
+        "\n",
+        "s2 = f.readline()\n",
+        "print(s2)\n",
+        "\n",
+        "# readlines() 함수 이용해서 모두 읽어오기\n",
+        "print('\\n3. readlines()')\n",
+        "print(f'위치 : {f.tell()}')\n",
+        "\n",
+        "s3 = f.readlines()\n",
+        "print(s3)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "h478S2BQesIb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#파일 r 모드로 열기\n",
+        "f = open(r'text.txt')\n",
+        "#f = open('text.txt', 'r')\n",
+        "#디폴트 인코딩 cp949\n",
+        "\n",
+        "text = f.read() #파일의 내용 전체를 문자열로 리턴\n",
+        "print(text)\n",
+        "\n",
+        "f.close()\n"
+      ],
+      "metadata": {
+        "id": "nWDARC5FeuLV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#파일 r 모드로 열기\n",
+        "f = open(r’test.txt')\n",
+        "line = f.readline() #파일의 라인 끝에 줄 바꿈 (\\n) 이 있을 경우 줄바꿈을 포함합니다.\n",
+        "line = line.strip() #줄 바꿈 (\\n) 제거\n",
+        "print(line) #1번째 줄입니다.\n",
+        "line = f.readline()\n",
+        "line = line.strip()\n",
+        "print(line) #2번째 줄입니다.\n",
+        "line = f.readline()\n",
+        "line = line.strip()\n",
+        "print(line) #3번째 줄입니다.\n",
+        "\n",
+        "f.close()"
+      ],
+      "metadata": {
+        "id": "HhYk9yZ2exO9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#파일 r 모드로 열기\n",
+        "f = open(r'text.txt')\n",
+        "\n",
+        "# 맨 처음 위치로 가서 한줄 읽기\n",
+        "print('\\n4. seek(0), readline()')\n",
+        "\n",
+        "f.seek(0)\n",
+        "print(f'위치 : {f.tell()}')\n",
+        "\n",
+        "s4 = f.readline()\n",
+        "print(s4)\n",
+        "\n",
+        "\n",
+        "# 파일 닫기\n",
+        "f.close("
+      ],
+      "metadata": {
+        "id": "L7UWnyp2exic"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
